@@ -31,7 +31,6 @@ for (let letter of abcs()) {
     console.log(letter.toUpperCase());
 }
 
-// my versions
 function* createGenerator() {
     yield 'hello world';
     yield 'go away!';
