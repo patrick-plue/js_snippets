@@ -53,6 +53,7 @@ console.log(reduce([1, 2, 3], (a, b) => a + b, 0));
 
 function countStringElements(array) {
     return array.reduce((acc, curr) => {
+        // check if current accumulator object has this property (element in array) in it. if: add 1 to the current value otherwise add the property
         acc[curr] = acc[curr] ? acc[curr] + 1 : 1;
         return acc;
     }, {});
@@ -61,3 +62,14 @@ function countStringElements(array) {
 console.log(
     countStringElements(['street', 'street', 'dog', 'fish', 'orca', 'orca'])
 );
+
+function filterReduce(array, fn) {
+    return array.reduce((acc, curr) => {
+        if (fn(curr)) {
+            acc.push(curr);
+        }
+        return acc;
+    }, []);
+}
+
+console.log(filterReduce([1, 2, 3, 4, 5], (a) => a > 3));
