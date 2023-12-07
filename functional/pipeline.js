@@ -14,15 +14,15 @@ console.log(
 );
 
 function pipeLineString(data, fns) {
-    return fns.reduce((acc, curr) => {
-        return curr(acc);
+    return fns.reduce((acc, fn) => {
+        return fn(acc);
     }, data);
 }
 
 function pipeLineEach(data, fns) {
     return data.map((x) => {
-        return fns.reduce((acc, curr) => {
-            return curr(acc);
+        return fns.reduce((acc, fn) => {
+            return fn(acc);
         }, x);
     });
 }
