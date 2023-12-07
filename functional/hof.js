@@ -28,7 +28,8 @@ console.log('result2', result2);
 
 function mapReduce(array, fn) {
     return array.reduce((acc, curr, index) => {
-        acc[index] = fn(curr);
+        // acc[index] = fn(curr);
+        acc.push(fn(curr));
         return acc;
     }, []);
 }
