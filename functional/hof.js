@@ -25,3 +25,12 @@ const result2 = copyArrayAndManipulate([1, 2, 3], generateUserName);
 
 console.log('result', result);
 console.log('result2', result2);
+
+function mapReduce(array, fn) {
+    return array.reduce((acc, curr, index) => {
+        acc[index] = fn(curr);
+        return acc;
+    }, []);
+}
+
+console.log('mapReduce', mapReduce([1, 2, 3], mulitplyByTwo));
