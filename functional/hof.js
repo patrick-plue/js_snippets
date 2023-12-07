@@ -34,4 +34,10 @@ function mapReduce(array, fn) {
     }, []);
 }
 
+/*
+reduce - think of it as reducing the accumulator (first thing) with each value at a time (second thing)
+1st step: reduce array ([]) with 1 to [1]
+2nd step: reduce array ([1]) with 2 to [1,2]
+3rd step: reduce array([1,2]) with 3 to [1,2,3]
+*/
 console.log('mapReduce', mapReduce([1, 2, 3], mulitplyByTwo));
