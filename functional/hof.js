@@ -41,3 +41,23 @@ reduce - think of it as reducing the accumulator (first thing) with each value a
 3rd step: reduce array([1,2]) with 3 to [1,2,3]
 */
 console.log('mapReduce', mapReduce([1, 2, 3], mulitplyByTwo));
+
+function reduce(array, howToCombine, buildingUp) {
+    for (let i = 0; i < array.length; i++) {
+        buildingUp = howToCombine(buildingUp, array[i]);
+    }
+    return buildingUp;
+}
+
+console.log(reduce([1, 2, 3], (a, b) => a + b, 0));
+
+function countStringElements(array) {
+    return array.reduce((acc, curr) => {
+        acc[curr] = acc[curr] ? acc[curr] + 1 : 1;
+        return acc;
+    }, {});
+}
+
+console.log(
+    countStringElements(['street', 'street', 'dog', 'fish', 'orca', 'orca'])
+);
