@@ -1,6 +1,6 @@
 /*
 sources & inspiration
-- will sentance - hard part of functional javascript - 
+- will sentance - hard parts of functional javascript - 
 */
 
 // passing in a function as argument
@@ -53,7 +53,7 @@ console.log(reduce([1, 2, 3], (a, b) => a + b, 0));
 
 function countStringElements(array) {
     return array.reduce((acc, curr) => {
-        // check if current accumulator object has this property (element in array) in it. if: add 1 to the current value otherwise add the property
+        // check if current accumulator object has this property (element in array) in it. if: add 1 to the current value otherwise add the property wit an initial value of 1
         acc[curr] = acc[curr] ? acc[curr] + 1 : 1;
         return acc;
     }, {});
