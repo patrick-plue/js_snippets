@@ -1,0 +1,21 @@
+body {
+    background-color: lightgray;
+}
+
+#container {
+    background-color: lightcoral;
+    height: 130vh;
+}
+
+#box {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: lightskyblue;
+}
+
+.up {
+    transform: translateY(-250px);
+    transition: 2s;
+    transition-timing-function: ease-in;
+}
