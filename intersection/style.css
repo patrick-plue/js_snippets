@@ -7,15 +7,20 @@ body {
     height: 130vh;
 }
 
-#box {
-    height: 300px;
-    width: 300px;
-    margin: 0 auto;
-    background-color: lightskyblue;
+h2 {
+    text-align: center;
+    opacity: 0;
 }
 
 .up {
-    transform: translateY(-250px);
-    transition: 2s;
-    transition-timing-function: ease-in;
+    opacity: 1;
+    transition: 1s;
+    transform: translateY(-100px);
+}
+
+keyframes scroll_in {
+    to {
+        opacity: 1;
+        /* transform: translateY(-250px); */
+    }
 }

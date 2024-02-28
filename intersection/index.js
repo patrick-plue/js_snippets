@@ -1,4 +1,4 @@
-const box = document.getElementById('box');
+const text = document.getElementById('text');
 const container = document.getElementById('container');
 // Observer
 
@@ -8,14 +8,14 @@ let options = {
     threshold: 0.1,
 };
 
-let observer = new IntersectionObserver(animateBox, options);
+let observer = new IntersectionObserver(animateText, options);
 
-observer.observe(box);
+observer.observe(text);
 
-function animateBox(entries) {
+function animateText(entries) {
     entries.forEach((element) => {
         if (element.isIntersecting) {
-            box.classList.add('up');
+            text.classList.add('up');
         }
     });
 }
